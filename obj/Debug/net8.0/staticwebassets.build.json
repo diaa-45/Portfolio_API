@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "MoBJTXQjmaxKBviHsyZESMW/Wv02/EoCFiRS4h1NGB4=",
+  "Source": "Portfolio_API",
+  "BasePath": "_content/Portfolio_API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Portfolio_API\\wwwroot",
+      "Source": "Portfolio_API",
+      "ContentRoot": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\",
+      "BasePath": "_content/Portfolio_API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
