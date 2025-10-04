@@ -6,6 +6,7 @@
         public string Title { get; set; } = string.Empty;
         public string? Description { get; set; }
 
+        public string? ImageCover { get; set; }
         // List of relative paths for images
         public List<string> Images { get; set; } = new List<string>();
 

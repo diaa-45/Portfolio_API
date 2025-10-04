@@ -136,3 +136,4 @@ C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Debug\net8.0\Portfol
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Debug\net8.0\Portfolio_API.genruntimeconfig.cache
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Debug\net8.0\ref\Portfolio_API.dll
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\bin\Debug\net8.0\Portfolio_API.staticwebassets.runtime.json
+C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Debug\net8.0\Portfolio_API.sourcelink.json

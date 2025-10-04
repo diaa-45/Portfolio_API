@@ -10,8 +10,8 @@ namespace Portfolio_API.Data
 
         // definition of the tables
         public DbSet<Administrator> Administrators { get; set; }
-        public DbSet<ProjectImage> ProjectImages { get; set; }
         public DbSet<Project> Projects { get; set; }
+        public DbSet<ProjectImage> ProjectImages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,10 +28,12 @@ namespace Portfolio_API.Data
 
             modelBuilder.Entity<Administrator>().HasData(admin);
 
+            // Optional: configure one-to-many explicitly
             modelBuilder.Entity<Project>()
-            .HasMany(p => p.Images)
-            .WithOne(i => i.Project)
-            .HasForeignKey(i => i.ProjectId);
+                .HasMany(p => p.Images)
+                .WithOne(pi => pi.Project)
+                .HasForeignKey(pi => pi.ProjectId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

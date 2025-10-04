@@ -16,12 +16,36 @@ namespace Portfolio_API.Repositories
 
         public async Task<IEnumerable<Project>> GetAllAsync()
         {
-            return await _context.Projects.ToListAsync();
-        }
+            return await _context.Projects
+                    .Select(p => new Project
+                    {
+                        Id = p.Id,
+                        Title = p.Title,
+                        Description = p.Description,
+                        ImageCover = p.ImageCover,
+                        DemoLink = p.DemoLink,
+                        Images = p.Images
+                            .Select(pi => new ProjectImage { ImageUrl = pi.ImageUrl })
+                            .ToList()
+                    })
+                    .ToListAsync();
+                    }
 
         public async Task<Project?> GetByIdAsync(int id)
         {
-            return await _context.Projects.FindAsync(id);
+            return await _context.Projects.Where(p => p.Id == id)
+            .Select(p => new Project
+            {
+                Id = p.Id,
+                Title = p.Title,
+                Description = p.Description,
+                ImageCover = p.ImageCover,
+                DemoLink = p.DemoLink,
+                Images = p.Images
+                    .Select(pi => new ProjectImage { ImageUrl = pi.ImageUrl })
+                    .ToList()
+            })
+            .FirstOrDefaultAsync(); 
         }
         public async Task<Project> AddAsync(Project project)
         {
@@ -40,6 +64,7 @@ namespace Portfolio_API.Repositories
             existing.Title = project.Title?? existing.Title;
             existing.Description = project.Description?? existing.Description;
             existing.DemoLink = project.DemoLink ?? existing.DemoLink;
+            existing.ImageCover = project.ImageCover ?? existing.ImageCover;
 
             // Add new images if any
             if (project.Images != null && project.Images.Any())

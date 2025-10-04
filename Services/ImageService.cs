@@ -39,5 +39,25 @@ namespace Portfolio_API.Services
 
             return savedPaths;
         }
+        public async Task<string> UploadImageAsync(IFormFile file, string folderName)
+        {
+            if (file == null || file.Length == 0) return string.Empty;
+
+            string uploadPath = Path.Combine(_env.WebRootPath, folderName);
+
+            if (!Directory.Exists(uploadPath))
+                Directory.CreateDirectory(uploadPath);
+
+            string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+            string fullPath = Path.Combine(uploadPath, fileName);
+
+            using (var stream = new FileStream(fullPath, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+
+            // relative path (for DB)
+            return $"/{folderName}/{fileName}";
+        }
     }
 }

@@ -34,9 +34,14 @@ namespace Portfolio_API.Services
                 Title = dto.Title,
                 Description = dto.Description,
                 DemoLink = dto.DemoLink,
+                ImageCover = "",
                 Images = new List<ProjectImage>()
             };
-
+            if(dto.ImageCover.Length > 0 && dto.ImageCover != null)
+            {
+                var path = await _imageService.UploadImageAsync(dto.ImageCover, "projects");
+                project.ImageCover = path;
+            }
             if (dto.Images != null && dto.Images.Any())
             {
                 var paths = await _imageService.UploadImagesAsync(dto.Images, "projects");
@@ -48,15 +53,21 @@ namespace Portfolio_API.Services
         }
         public async Task<ProjectDto?> UpdateAsync(UpdateProjectDto dto)
         {
-            var project = new Project
-            {
-                Id = dto.Id,
-                Title = dto.Title,
-                Description = dto.Description,
-                DemoLink = dto.DemoLink,
-                Images = new List<ProjectImage>()
-            };
+            // 1. Load project from DB with existing images
+            var project = await _repo.GetByIdAsync(dto.Id);
+            if (project == null)
+                return null;
+            // 2. Update scalar properties
+            project.Title = dto.Title;
+            project.Description = dto.Description;
+            project.DemoLink = dto.DemoLink;
+            project.ImageCover = project.ImageCover; // keep existing cover if no new provided
 
+            if (dto.NewImageCover != null && dto.NewImageCover.Length > 0)
+            {
+                var path = await _imageService.UploadImageAsync(dto.NewImageCover, "projects");
+                project.ImageCover = path;
+            }
             if (dto.NewImages != null && dto.NewImages.Any())
             {
                 var paths = await _imageService.UploadImagesAsync(dto.NewImages, "projects");
