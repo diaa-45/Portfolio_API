@@ -37,7 +37,7 @@ namespace Portfolio_API.Services
                 ImageCover = "",
                 Images = new List<ProjectImage>()
             };
-            if(dto.ImageCover.Length > 0 && dto.ImageCover != null)
+            if(dto.ImageCover != null)
             {
                 var path = await _imageService.UploadImageAsync(dto.ImageCover, "projects");
                 project.ImageCover = path;
@@ -91,6 +91,7 @@ namespace Portfolio_API.Services
                 Title = p.Title,
                 Description = p.Description,
                 DemoLink = p.DemoLink,
+                ImageCover = p.ImageCover,
                 Images = p.Images.Select(i => i.ImageUrl).ToList()
             };
         }
