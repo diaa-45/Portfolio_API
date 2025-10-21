@@ -25,7 +25,7 @@ namespace Portfolio_API.Repositories
                         ImageCover = p.ImageCover,
                         DemoLink = p.DemoLink,
                         Images = p.Images
-                            .Select(pi => new ProjectImage { ImageUrl = pi.ImageUrl })
+                            .Select(pi => new ProjectImages { ImageUrl = pi.ImageUrl })
                             .ToList()
                     })
                     .ToListAsync();
@@ -42,7 +42,7 @@ namespace Portfolio_API.Repositories
                 ImageCover = p.ImageCover,
                 DemoLink = p.DemoLink,
                 Images = p.Images
-                    .Select(pi => new ProjectImage { ImageUrl = pi.ImageUrl })
+                    .Select(pi => new ProjectImages { ImageUrl = pi.ImageUrl })
                     .ToList()
             })
             .FirstOrDefaultAsync(); 

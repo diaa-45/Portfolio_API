@@ -1,6 +1,6 @@
 ﻿using Portfolio_API.Models;
 
-public class ProjectImage
+public class ProjectImages
 {
     public int Id { get; set; }
     public string ImageUrl { get; set; } = string.Empty;

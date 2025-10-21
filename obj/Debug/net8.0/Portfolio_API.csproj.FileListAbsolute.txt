@@ -1,5 +1,6 @@
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\bin\Debug\net8.0\appsettings.json
+C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\bin\Debug\net8.0\Portfolio_API.staticwebassets.runtime.json
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\bin\Debug\net8.0\Portfolio_API.exe
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\bin\Debug\net8.0\Portfolio_API.deps.json
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\bin\Debug\net8.0\Portfolio_API.runtimeconfig.json
@@ -121,6 +122,7 @@ C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Debug\net8.0\Portfol
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Debug\net8.0\Portfolio_API.csproj.CoreCompileInputs.cache
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Debug\net8.0\Portfolio_API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Debug\net8.0\Portfolio_API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Debug\net8.0\Portfolio_API.sourcelink.json
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Debug\net8.0\staticwebassets\msbuild.Portfolio_API.Microsoft.AspNetCore.StaticWebAssets.props
@@ -135,5 +137,3 @@ C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Debug\net8.0\refint\
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Debug\net8.0\Portfolio_API.pdb
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Debug\net8.0\Portfolio_API.genruntimeconfig.cache
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Debug\net8.0\ref\Portfolio_API.dll
-C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\bin\Debug\net8.0\Portfolio_API.staticwebassets.runtime.json
-C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Debug\net8.0\Portfolio_API.sourcelink.json

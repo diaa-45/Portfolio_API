@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Portfolio_API.Interfaces;
+using Portfolio_API.Services;
 
 namespace Portfolio_API.Controllers
 {
@@ -10,10 +11,12 @@ namespace Portfolio_API.Controllers
     public class ProjectsController : ControllerBase
     {
         private readonly IProjectService _service;
+        private readonly IImageService _imageService;
 
-        public ProjectsController(IProjectService service)
+        public ProjectsController(IProjectService service,IImageService imageService)
         {
             _service = service;
+            _imageService = imageService;
         }
         [HttpGet]
         [AllowAnonymous]

@@ -35,17 +35,17 @@ namespace Portfolio_API.Services
                 Description = dto.Description,
                 DemoLink = dto.DemoLink,
                 ImageCover = "",
-                Images = new List<ProjectImage>()
+                Images = new List<ProjectImages>()
             };
             if(dto.ImageCover != null)
             {
-                var path = await _imageService.UploadImageAsync(dto.ImageCover, "projects");
+                var path = await _imageService.UploadSingleImageAsync(dto.ImageCover, "projects");
                 project.ImageCover = path;
             }
             if (dto.Images != null && dto.Images.Any())
             {
                 var paths = await _imageService.UploadImagesAsync(dto.Images, "projects");
-                project.Images = paths.Select(p => new ProjectImage { ImageUrl = p }).ToList();
+                project.Images = paths.Select(p => new ProjectImages { ImageUrl = p }).ToList();
             }
 
             await _repo.AddAsync(project);
@@ -65,13 +65,13 @@ namespace Portfolio_API.Services
 
             if (dto.NewImageCover != null && dto.NewImageCover.Length > 0)
             {
-                var path = await _imageService.UploadImageAsync(dto.NewImageCover, "projects");
+                var path = await _imageService.UploadSingleImageAsync(dto.NewImageCover, "projects");
                 project.ImageCover = path;
             }
             if (dto.NewImages != null && dto.NewImages.Any())
             {
                 var paths = await _imageService.UploadImagesAsync(dto.NewImages, "projects");
-                project.Images = paths.Select(p => new ProjectImage { ImageUrl = p }).ToList();
+                project.Images = paths.Select(p => new ProjectImages { ImageUrl = p }).ToList();
             }
 
             var updated = await _repo.UpdateAsync(project);
@@ -92,7 +92,8 @@ namespace Portfolio_API.Services
                 Description = p.Description,
                 DemoLink = p.DemoLink,
                 ImageCover = p.ImageCover,
-                Images = p.Images.Select(i => i.ImageUrl).ToList()
+                // select id and url from images
+                Images = p.Images.Select(i => i.ImageUrl ).ToList()
             };
         }
     }

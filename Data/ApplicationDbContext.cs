@@ -11,7 +11,9 @@ namespace Portfolio_API.Data
         // definition of the tables
         public DbSet<Administrator> Administrators { get; set; }
         public DbSet<Project> Projects { get; set; }
-        public DbSet<ProjectImage> ProjectImages { get; set; }
+        public DbSet<ProjectImages> ProjectImages { get; set; }
+        public DbSet<Article> Articles { get; set; }
+        public DbSet<Course> Courses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
