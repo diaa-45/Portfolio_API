@@ -2,7 +2,6 @@
 using Portfolio_API.Data;
 using Portfolio_API.Interfaces;
 using Portfolio_API.Models;
-using System.Threading.Tasks;
 
 namespace Portfolio_API.Repositories
 {
