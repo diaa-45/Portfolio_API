@@ -51,17 +51,18 @@ namespace Portfolio_API.Services
             await _repo.AddAsync(project);
             return MapToDto(project);
         }
-        public async Task<ProjectDto?> UpdateAsync(UpdateProjectDto dto)
+        public async Task<ProjectDto?> UpdateAsync( int id,UpdateProjectDto dto)
         {
             // 1. Load project from DB with existing images
-            var project = await _repo.GetByIdAsync(dto.Id);
+            var project = await _repo.GetByIdAsync(id);
             if (project == null)
                 return null;
             // 2. Update scalar properties
-            project.Title = dto.Title;
-            project.Description = dto.Description;
-            project.DemoLink = dto.DemoLink;
             project.ImageCover = project.ImageCover; // keep existing cover if no new provided
+
+            if(dto.Title != null) project.Title = dto.Title;
+            if (dto.Description != null) project.Description = dto.Description;
+            if (dto.DemoLink != null) project.DemoLink = dto.DemoLink;
 
             if (dto.NewImageCover != null && dto.NewImageCover.Length > 0)
             {
@@ -93,7 +94,7 @@ namespace Portfolio_API.Services
                 DemoLink = p.DemoLink,
                 ImageCover = p.ImageCover,
                 // select id and url from images
-                Images = p.Images.Select(i => i.ImageUrl ).ToList()
+                Images = p.Images.Select(i => new ProjectImages { Id = i.Id, ImageUrl = i.ImageUrl }).ToList()
             };
         }
     }

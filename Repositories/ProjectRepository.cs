@@ -24,9 +24,7 @@ namespace Portfolio_API.Repositories
                         Description = p.Description,
                         ImageCover = p.ImageCover,
                         DemoLink = p.DemoLink,
-                        Images = p.Images
-                            .Select(pi => new ProjectImages { ImageUrl = pi.ImageUrl })
-                            .ToList()
+                        Images = p.Images.Select(p => new ProjectImages { Id = p.Id  ,ImageUrl = p.ImageUrl}).ToList()
                     })
                     .ToListAsync();
                     }
@@ -41,9 +39,8 @@ namespace Portfolio_API.Repositories
                 Description = p.Description,
                 ImageCover = p.ImageCover,
                 DemoLink = p.DemoLink,
-                Images = p.Images
-                    .Select(pi => new ProjectImages { ImageUrl = pi.ImageUrl })
-                    .ToList()
+                Images = p.Images.Select(p => new ProjectImages { Id = p.Id, ImageUrl = p.ImageUrl }).ToList()
+
             })
             .FirstOrDefaultAsync(); 
         }

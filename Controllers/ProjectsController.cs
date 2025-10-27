@@ -39,6 +39,8 @@ namespace Portfolio_API.Controllers
         [RequestSizeLimit(10_000_000)] // 10 MB limit (optional)
         public async Task<IActionResult> Create([FromForm] CreateProjectDto dto)
         {
+            Console.WriteLine($"Cover: {dto.ImageCover?.FileName ?? "NULL"}");
+            Console.WriteLine($"Images count: {dto.Images?.Count ?? 0}");
             var created = await _service.AddAsync(dto);
             return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
         }
@@ -47,9 +49,7 @@ namespace Portfolio_API.Controllers
         [Authorize]
         public async Task<IActionResult> Update(int id, [FromForm] UpdateProjectDto dto)
         {
-            if (id != dto.Id) return BadRequest();
-
-            var updated = await _service.UpdateAsync(dto);
+            var updated = await _service.UpdateAsync(id, dto);
             if (updated == null) return NotFound();
 
             return Ok(updated);
