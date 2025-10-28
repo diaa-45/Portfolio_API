@@ -1,69 +1,60 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Portfolio_API.DTOs;
 using Portfolio_API.Interfaces;
-using Portfolio_API.Models;
-using Portfolio_API.Services;
 
 namespace Portfolio_API.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     [Authorize]
     public class ArticlesController : ControllerBase
     {
-        private readonly IArticleRepository _articleRepo;
+        private readonly IArticleService _articleService;
 
-        public ArticlesController(IArticleRepository articleRepo)
+        public ArticlesController(IArticleService articleService)
         {
-            _articleRepo = articleRepo;
+            _articleService = articleService;
         }
 
         [HttpGet]
         [AllowAnonymous]
         public async Task<IActionResult> GetAll()
         {
-            var articles = await _articleRepo.GetAllAsync();
-            return Ok(articles);
+            var result = await _articleService.GetAllAsync();
+            return Ok(result);
         }
 
         [HttpGet("{id}")]
         [AllowAnonymous]
         public async Task<IActionResult> GetById(int id)
         {
-            var article = await _articleRepo.GetByIdAsync(id);
-            if (article == null) return NotFound();
-            return Ok(article);
+            var result = await _articleService.GetByIdAsync(id);
+            if (result == null) return NotFound();
+            return Ok(result);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] Article article)
+        public async Task<IActionResult> Create([FromForm] CreateArticleDto dto)
         {
-            await _articleRepo.AddAsync(article);
-            await _articleRepo.SaveAsync();
-            return CreatedAtAction(nameof(GetById), new { id = article.Id }, article);
+            var result = await _articleService.CreateAsync(dto);
+            return CreatedAtAction(nameof(GetById), new { id = result.Id }, result);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] Article article)
+        public async Task<IActionResult> Update(int id, [FromForm] UpdateArticleDto dto)
         {
-            var existing = await _articleRepo.GetByIdAsync(id);
-            if (existing == null) return NotFound();
-
-            existing.Title = article.Title;
-            existing.Content = article.Content;
-            existing.MainImage = article.MainImage;
-            existing.ThumbImage = article.ThumbImage;
-
-            await _articleRepo.UpdateAsync(existing);
-            await _articleRepo.SaveAsync();
-            return NoContent();
+            
+            var result = await _articleService.UpdateAsync(id,dto);
+            if (result == null) return NotFound();
+            return Ok(result);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            await _articleRepo.DeleteAsync(id);
-            await _articleRepo.SaveAsync();
+            var success = await _articleService.DeleteAsync(id);
+            if (!success) return NotFound();
             return NoContent();
         }
     }

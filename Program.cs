@@ -22,7 +22,8 @@ builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 builder.Services.AddScoped<IProjectImageRepository, ProjectImageRepository>();
 
 builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
-builder.Services.AddScoped<IArticleImageRepository, ArticleImageRepository>();
+builder.Services.AddScoped<IArticleService, ArticleService>();
+
 builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddScoped<IImageService, ImageService>();
 builder.Services.AddSingleton<JwtHelper>();
