@@ -49,7 +49,7 @@ namespace Portfolio_API.Repositories
             existing.Title = article.Title;
             existing.Content = article.Content;
             existing.Date = article.Date;
-            existing.AuthorName = article.AuthorName;
+            existing.Author = article.Author;
             existing.MainImage = article.MainImage;
             existing.ThumbImage = article.ThumbImage;
 

@@ -36,7 +36,7 @@ namespace Portfolio_API.Services
             {
                 Title = dto.Title,
                 Content = dto.Content,
-                AuthorName = dto.Author,
+                Author = dto.Author,
                 Date = dto.Date,
                 MainImage = mainImagePath,
                 ThumbImage = thumbImagePath
@@ -54,7 +54,7 @@ namespace Portfolio_API.Services
             // Only update if the value is provided (not null)
             if (dto.Title != null) existing.Title = dto.Title;
             if (dto.Content != null) existing.Content = dto.Content;
-            if (dto.Author != null) existing.AuthorName = dto.Author;
+            if (dto.Author != null) existing.Author = dto.Author;
             existing.Date = DateTime.Now; 
 
             if (dto.MainImage != null)
