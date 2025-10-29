@@ -19,12 +19,15 @@ builder.Services.AddScoped<IAdministratorRepository, AdministratorRepository>();
 builder.Services.AddScoped<IAdministratorService, AdministratorService>();
 
 builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddScoped<IProjectImageRepository, ProjectImageRepository>();
 
 builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
 builder.Services.AddScoped<IArticleService, ArticleService>();
 
-builder.Services.AddScoped<IProjectService, ProjectService>();
+builder.Services.AddScoped<ICourseRepository, CourseRepository>();
+builder.Services.AddScoped<ICourseService, CourseService>();
+
 builder.Services.AddScoped<IImageService, ImageService>();
 builder.Services.AddSingleton<JwtHelper>();
 

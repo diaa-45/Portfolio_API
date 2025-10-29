@@ -9,24 +9,12 @@
       "PackagePath": "staticwebassets\\articles\\21314a9f-7c92-4f9b-9c9c-db6264b5c8e1.png"
     },
     {
-      "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\23eeac66-0cf4-4db6-8ce2-07e7465c7581.png",
-      "PackagePath": "staticwebassets\\articles\\23eeac66-0cf4-4db6-8ce2-07e7465c7581.png"
-    },
-    {
       "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\2e872990-ec91-4d66-ae77-a464a8b3cb5a.png",
       "PackagePath": "staticwebassets\\articles\\2e872990-ec91-4d66-ae77-a464a8b3cb5a.png"
     },
     {
       "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\4944015c-3702-4d97-a2ab-9599ac728369.png",
       "PackagePath": "staticwebassets\\articles\\4944015c-3702-4d97-a2ab-9599ac728369.png"
-    },
-    {
-      "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\5a39a8fb-1bd6-4e1a-ae24-b40db2c87a9b.png",
-      "PackagePath": "staticwebassets\\articles\\5a39a8fb-1bd6-4e1a-ae24-b40db2c87a9b.png"
-    },
-    {
-      "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\64a9a45d-acc0-467b-a54f-8e2c917a6d49.jpg",
-      "PackagePath": "staticwebassets\\articles\\64a9a45d-acc0-467b-a54f-8e2c917a6d49.jpg"
     },
     {
       "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\68d5dd7b-5d11-426e-85a0-cc3dab8579a3.png",
@@ -41,8 +29,12 @@
       "PackagePath": "staticwebassets\\articles\\9f00920c-b658-4dfa-8e45-59dc2a3a869e.png"
     },
     {
-      "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\c906bf2f-f6d1-4f72-a9f8-299b94a15954.png",
-      "PackagePath": "staticwebassets\\articles\\c906bf2f-f6d1-4f72-a9f8-299b94a15954.png"
+      "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\b4d3a34c-57d3-4277-8290-e585c439727f.png",
+      "PackagePath": "staticwebassets\\articles\\b4d3a34c-57d3-4277-8290-e585c439727f.png"
+    },
+    {
+      "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\d5f67704-2391-4302-8bed-d96f7a2ecc1d.png",
+      "PackagePath": "staticwebassets\\articles\\d5f67704-2391-4302-8bed-d96f7a2ecc1d.png"
     },
     {
       "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\e1a7c461-2433-4ca1-a811-43ef0220e5cd.png",
@@ -51,6 +43,18 @@
     {
       "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\ec0f2b59-0219-426f-958b-665930de6c6e.png",
       "PackagePath": "staticwebassets\\articles\\ec0f2b59-0219-426f-958b-665930de6c6e.png"
+    },
+    {
+      "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\courses\\3776f576-9b8f-4f9f-aa43-d46cb447db9f.png",
+      "PackagePath": "staticwebassets\\courses\\3776f576-9b8f-4f9f-aa43-d46cb447db9f.png"
+    },
+    {
+      "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\courses\\45860ac8-f472-4dca-9d37-5905959f9404.png",
+      "PackagePath": "staticwebassets\\courses\\45860ac8-f472-4dca-9d37-5905959f9404.png"
+    },
+    {
+      "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\courses\\93f97e7d-a927-4842-8d4a-924cf59009e7.png",
+      "PackagePath": "staticwebassets\\courses\\93f97e7d-a927-4842-8d4a-924cf59009e7.png"
     },
     {
       "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\projects\\016028ec-9e9b-4dd1-ab0f-f17997ba52c9.jpg",
