@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Portfolio_API.Data;
+using Portfolio_API.DTOs;
 using Portfolio_API.Interfaces;
 using Portfolio_API.Models;
 
@@ -14,20 +15,40 @@ namespace Portfolio_API.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Project>> GetAllAsync()
+        public async Task<PagedResult<Project>> GetAllAsync(int pageNumber, int pageSize)
         {
-            return await _context.Projects
-                    .Select(p => new Project
-                    {
-                        Id = p.Id,
-                        Title = p.Title,
-                        Description = p.Description,
-                        ImageCover = p.ImageCover,
-                        DemoLink = p.DemoLink,
-                        Images = p.Images.Select(p => new ProjectImages { Id = p.Id  ,ImageUrl = p.ImageUrl}).ToList()
-                    })
-                    .ToListAsync();
-                    }
+            var query = _context.Projects
+                    .AsNoTracking()
+                    .Include(p => p.Images) // ✅ Eager load to avoid N+1
+                    .OrderByDescending(p => p.Id); 
+
+            var totalCount = await query.CountAsync();
+            // Get paginated data with projection
+            var data = await query
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .Select(p => new Project
+                {
+                    Id = p.Id,
+                    Title = p.Title,
+                    Description = p.Description,
+                    ImageCover = p.ImageCover,
+                    DemoLink = p.DemoLink,
+                    Images = p.Images
+                        .Select(img => new ProjectImages // ✅ Use different variable name
+                        {
+                            Id = img.Id,
+                            ImageUrl = img.ImageUrl
+                        }).ToList()
+                }).ToListAsync();
+            return new PagedResult<Project>
+            {
+                Data = data,
+                PageNumber = pageNumber,
+                PageSize = pageSize,
+                TotalCount = totalCount
+            };
+        }
 
         public async Task<Project?> GetByIdAsync(int id)
         {

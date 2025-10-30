@@ -1,6 +1,7 @@
 ﻿// Repositories/ArticleRepository.cs
 using Microsoft.EntityFrameworkCore;
 using Portfolio_API.Data;
+using Portfolio_API.DTOs;
 using Portfolio_API.Interfaces;
 using Portfolio_API.Models;
 using System.Collections.Generic;
@@ -17,12 +18,24 @@ namespace Portfolio_API.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Article>> GetAllAsync()
+        public async Task<PagedResult<Article>> GetAllAsync(int pageNumber, int pageSize)
         {
-            return await _context.Articles
-                .AsNoTracking()
-                .OrderByDescending(a => a.Date)
+            var query = _context.Articles.AsNoTracking().OrderByDescending(c => c.Id);
+
+            var totalCount = await query.CountAsync();
+
+            var data = await query
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
                 .ToListAsync();
+
+            return new PagedResult<Article>
+            {
+                Data = data,
+                PageNumber = pageNumber,
+                PageSize = pageSize,
+                TotalCount = totalCount
+            };
         }
 
         public async Task<Article?> GetByIdAsync(int id)

@@ -8,8 +8,13 @@
 
         public string? ImageCover { get; set; }
         // List of relative paths for images
-        public List<ProjectImages> Images { get; set; } = new List<ProjectImages>();
+        public List<ProjectImageDto> Images { get; set; } = new List<ProjectImageDto>();
 
         public string? DemoLink { get; set; }
+    }
+    public class ProjectImageDto
+    {
+        public int Id { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

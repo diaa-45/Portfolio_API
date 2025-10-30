@@ -5,7 +5,7 @@ namespace Portfolio_API.Interfaces
 {
     public interface IArticleService
     {
-        Task<IEnumerable<Article>> GetAllAsync();
+        Task<PagedResult<Article>> GetAllAsync(int pageNumber, int pageSize);
         Task<Article?> GetByIdAsync(int id);
         Task<Article> CreateAsync(CreateArticleDto dto);
         Task<Article?> UpdateAsync(int id,UpdateArticleDto dto);

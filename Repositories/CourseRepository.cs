@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Portfolio_API.Data;
+using Portfolio_API.DTOs;
 using Portfolio_API.Interfaces;
 using Portfolio_API.Models;
 
@@ -32,11 +33,24 @@ namespace Portfolio_API.Repositories
             return true;
         }
 
-        public async Task<IEnumerable<Course>> GetAllAsync()
+        public async Task<PagedResult<Course>> GetAllAsync(int pageNumber, int pageSize)
         {
-            return await _context.Courses
-                .AsNoTracking()
+            var query = _context.Courses.AsNoTracking().OrderByDescending(c => c.Id);
+
+            var totalCount = await query.CountAsync();
+
+            var data = await query
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
                 .ToListAsync();
+
+            return new PagedResult<Course>
+            {
+                Data = data,
+                PageNumber = pageNumber,
+                PageSize = pageSize,
+                TotalCount = totalCount
+            };
         }
 
         public async Task<Course?> GetByIdAsync(int id)

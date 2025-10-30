@@ -15,8 +15,8 @@ namespace Portfolio_API.Services
             _imageService = imageService;
         }
 
-        public async Task<IEnumerable<Article>> GetAllAsync() =>
-            await _articleRepo.GetAllAsync();
+        public async Task<PagedResult<Article>> GetAllAsync(int pageNumber, int pageSize) =>
+            await _articleRepo.GetAllAsync(pageNumber,pageSize);
 
         public async Task<Article?> GetByIdAsync(int id) =>
             await _articleRepo.GetByIdAsync(id);

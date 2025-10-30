@@ -4,7 +4,7 @@ namespace Portfolio_API.Interfaces
 {
     public interface IProjectService
     {
-        Task<IEnumerable<ProjectDto>> GetAllAsync();
+        Task<PagedResult<ProjectDto>> GetAllAsync(int pageNumber, int pageSize);
         Task<ProjectDto?> GetByIdAsync(int id);
         Task<ProjectDto> AddAsync(CreateProjectDto dto);
         Task<ProjectDto?> UpdateAsync(int id,UpdateProjectDto dto);

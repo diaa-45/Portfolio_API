@@ -14,8 +14,8 @@ namespace Portfolio_API.Services
             _courseleRepo = courseleRepo;
             _imageService = imageService;
         }
-        public async Task<IEnumerable<Course>> GetAllAsync() =>
-            await _courseleRepo.GetAllAsync();
+        public async Task<PagedResult<Course>> GetAllAsync(int pageNumber, int pageSize) =>
+            await _courseleRepo.GetAllAsync(pageNumber, pageSize);
 
         public async Task<Course?> GetByIdAsync(int id) =>
             await _courseleRepo.GetByIdAsync(id);

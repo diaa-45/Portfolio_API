@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kBwF8PJUHEytmFotqRbc4skSwoiFTRmvJt2H3ZSkHZQ=",
+  "Hash": "vM0+8U0db4yiky5ktWhDjOyJFnyBQWwbwxjloCCjLIA=",
   "Source": "Portfolio_API",
   "BasePath": "_content/Portfolio_API",
   "Mode": "Default",
@@ -34,6 +34,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\articles\\0a701f92-577c-4ef4-b16c-6c4ef962ebd6.png"
+    },
+    {
+      "Identity": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\12f198df-8ae8-4ad1-adbd-8e96d1b46a9e.jpg",
+      "SourceId": "Portfolio_API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\",
+      "BasePath": "_content/Portfolio_API",
+      "RelativePath": "articles/12f198df-8ae8-4ad1-adbd-8e96d1b46a9e.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\articles\\12f198df-8ae8-4ad1-adbd-8e96d1b46a9e.jpg"
     },
     {
       "Identity": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\21314a9f-7c92-4f9b-9c9c-db6264b5c8e1.png",
@@ -169,6 +188,25 @@
       "OriginalItemSpec": "wwwroot\\articles\\b4d3a34c-57d3-4277-8290-e585c439727f.png"
     },
     {
+      "Identity": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\c28fba1f-ac38-45fd-8f85-d3cacfeea0d8.jpg",
+      "SourceId": "Portfolio_API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\",
+      "BasePath": "_content/Portfolio_API",
+      "RelativePath": "articles/c28fba1f-ac38-45fd-8f85-d3cacfeea0d8.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\articles\\c28fba1f-ac38-45fd-8f85-d3cacfeea0d8.jpg"
+    },
+    {
       "Identity": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\d5f67704-2391-4302-8bed-d96f7a2ecc1d.png",
       "SourceId": "Portfolio_API",
       "SourceType": "Discovered",
@@ -226,6 +264,25 @@
       "OriginalItemSpec": "wwwroot\\articles\\ec0f2b59-0219-426f-958b-665930de6c6e.png"
     },
     {
+      "Identity": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\courses\\0cca3de0-5790-4120-bb3f-aea6cc5bd6c8.png",
+      "SourceId": "Portfolio_API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\",
+      "BasePath": "_content/Portfolio_API",
+      "RelativePath": "courses/0cca3de0-5790-4120-bb3f-aea6cc5bd6c8.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\courses\\0cca3de0-5790-4120-bb3f-aea6cc5bd6c8.png"
+    },
+    {
       "Identity": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\courses\\3776f576-9b8f-4f9f-aa43-d46cb447db9f.png",
       "SourceId": "Portfolio_API",
       "SourceType": "Discovered",
@@ -243,6 +300,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\courses\\3776f576-9b8f-4f9f-aa43-d46cb447db9f.png"
+    },
+    {
+      "Identity": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\courses\\3be5577f-22a0-4344-a306-cc715ccce2b5.png",
+      "SourceId": "Portfolio_API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\",
+      "BasePath": "_content/Portfolio_API",
+      "RelativePath": "courses/3be5577f-22a0-4344-a306-cc715ccce2b5.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\courses\\3be5577f-22a0-4344-a306-cc715ccce2b5.png"
     },
     {
       "Identity": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\courses\\45860ac8-f472-4dca-9d37-5905959f9404.png",
@@ -281,6 +357,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\courses\\93f97e7d-a927-4842-8d4a-924cf59009e7.png"
+    },
+    {
+      "Identity": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\courses\\a74ff142-d711-4787-88f9-2c74820fddfe.png",
+      "SourceId": "Portfolio_API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\",
+      "BasePath": "_content/Portfolio_API",
+      "RelativePath": "courses/a74ff142-d711-4787-88f9-2c74820fddfe.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\courses\\a74ff142-d711-4787-88f9-2c74820fddfe.png"
     },
     {
       "Identity": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\projects\\016028ec-9e9b-4dd1-ab0f-f17997ba52c9.jpg",

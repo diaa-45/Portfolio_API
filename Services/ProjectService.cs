@@ -15,10 +15,17 @@ namespace Portfolio_API.Services
             _imageService = imageService;
         }
 
-        public async Task<IEnumerable<ProjectDto>> GetAllAsync()
+        public async Task<PagedResult<ProjectDto>> GetAllAsync(int pageNumber, int pageSize)
         {
-            var projects = await _repo.GetAllAsync();
-            return projects.Select(MapToDto);
+            var projects = await _repo.GetAllAsync(pageNumber,pageSize);
+            // ✅ Map the Data property, preserve paging info
+            return new PagedResult<ProjectDto>
+            {
+                Data = projects.Data.Select(MapToDto).ToList(), // ✅ Fix: Add ToList()
+                PageNumber = projects.PageNumber,
+                PageSize = projects.PageSize,
+                TotalCount = projects.TotalCount
+            };
         }
 
         public async Task<ProjectDto?> GetByIdAsync(int id)
@@ -94,7 +101,7 @@ namespace Portfolio_API.Services
                 DemoLink = p.DemoLink,
                 ImageCover = p.ImageCover,
                 // select id and url from images
-                Images = p.Images.Select(i => new ProjectImages { Id = i.Id, ImageUrl = i.ImageUrl }).ToList()
+                Images = p.Images.Select(i => new ProjectImageDto { Id = i.Id, ImageUrl = i.ImageUrl }).ToList()
             };
         }
     }
