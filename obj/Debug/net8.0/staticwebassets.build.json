@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vM0+8U0db4yiky5ktWhDjOyJFnyBQWwbwxjloCCjLIA=",
+  "Hash": "qye2QlPQO8TxrPh0wOYbS9nftB16Hg8S6uQpzxUSQzA=",
   "Source": "Portfolio_API",
   "BasePath": "_content/Portfolio_API",
   "Mode": "Default",
@@ -55,6 +55,25 @@
       "OriginalItemSpec": "wwwroot\\articles\\12f198df-8ae8-4ad1-adbd-8e96d1b46a9e.jpg"
     },
     {
+      "Identity": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\1ea1e4b3-72ef-4890-b40a-9112bfd0a9dd.jpg",
+      "SourceId": "Portfolio_API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\",
+      "BasePath": "_content/Portfolio_API",
+      "RelativePath": "articles/1ea1e4b3-72ef-4890-b40a-9112bfd0a9dd.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\articles\\1ea1e4b3-72ef-4890-b40a-9112bfd0a9dd.jpg"
+    },
+    {
       "Identity": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\21314a9f-7c92-4f9b-9c9c-db6264b5c8e1.png",
       "SourceId": "Portfolio_API",
       "SourceType": "Discovered",
@@ -91,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\articles\\2e872990-ec91-4d66-ae77-a464a8b3cb5a.png"
+    },
+    {
+      "Identity": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\41ac6aa6-6728-49fb-a0fd-ddf2eb65f193.jpg",
+      "SourceId": "Portfolio_API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\",
+      "BasePath": "_content/Portfolio_API",
+      "RelativePath": "articles/41ac6aa6-6728-49fb-a0fd-ddf2eb65f193.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\articles\\41ac6aa6-6728-49fb-a0fd-ddf2eb65f193.jpg"
     },
     {
       "Identity": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\4944015c-3702-4d97-a2ab-9599ac728369.png",

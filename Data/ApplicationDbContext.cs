@@ -14,6 +14,7 @@ namespace Portfolio_API.Data
         public DbSet<ProjectImages> ProjectImages { get; set; }
         public DbSet<Article> Articles { get; set; }
         public DbSet<Course> Courses { get; set; }
+        public DbSet<About> About { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

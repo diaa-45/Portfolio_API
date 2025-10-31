@@ -28,6 +28,9 @@ builder.Services.AddScoped<IArticleService, ArticleService>();
 builder.Services.AddScoped<ICourseRepository, CourseRepository>();
 builder.Services.AddScoped<ICourseService, CourseService>();
 
+builder.Services.AddScoped<IAboutRepository, AboutRepository>();
+builder.Services.AddScoped<IAboutService, AboutService>();
+
 builder.Services.AddScoped<IImageService, ImageService>();
 builder.Services.AddSingleton<JwtHelper>();
 
