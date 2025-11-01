@@ -66,8 +66,9 @@ namespace Portfolio_API.Services
                 return null;
             // 2. Update scalar properties
             project.ImageCover = project.ImageCover; // keep existing cover if no new provided
+            project.Images = project.Images; // keep existing images
 
-            if(dto.Title != null) project.Title = dto.Title;
+            if (dto.Title != null) project.Title = dto.Title;
             if (dto.Description != null) project.Description = dto.Description;
             if (dto.DemoLink != null) project.DemoLink = dto.DemoLink;
 
@@ -76,11 +77,7 @@ namespace Portfolio_API.Services
                 var path = await _imageService.UploadSingleImageAsync(dto.NewImageCover, "projects");
                 project.ImageCover = path;
             }
-            if (dto.NewImages != null && dto.NewImages.Any())
-            {
-                var paths = await _imageService.UploadImagesAsync(dto.NewImages, "projects");
-                project.Images = paths.Select(p => new ProjectImages { ImageUrl = p }).ToList();
-            }
+            
 
             var updated = await _repo.UpdateAsync(project);
             return updated == null ? null : MapToDto(updated);
@@ -89,7 +86,17 @@ namespace Portfolio_API.Services
         {
             return await _repo.DeleteAsync(id);
         }
-
+        public async Task<bool> DeleteImageAsync(int projectId, int imageId)
+        {
+            return await _repo.DeleteImageAsync(projectId, imageId);
+        }
+        // add new image to images tour 
+        public async Task<ProjectImages> AddImageAsync(int projectId, IFormFile image)
+        {
+            var imageUrl = await _imageService.UploadSingleImageAsync(image, "projects");
+            var projectImage = await _repo.AddImageAsync(projectId, imageUrl);
+            return projectImage;
+        }
         // Map Project to ProjectDto
         private ProjectDto MapToDto(Project p)
         {

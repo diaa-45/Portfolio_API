@@ -84,14 +84,6 @@ namespace Portfolio_API.Repositories
             existing.DemoLink = project.DemoLink ?? existing.DemoLink;
             existing.ImageCover = project.ImageCover ?? existing.ImageCover;
 
-            // Add new images if any
-            if (project.Images != null && project.Images.Any())
-            {
-                foreach (var img in project.Images)
-                {
-                    existing.Images.Add(img);
-                }
-            }
 
             await _context.SaveChangesAsync();
             return existing;
@@ -106,5 +98,35 @@ namespace Portfolio_API.Repositories
             await _context.SaveChangesAsync();
             return true;
         }
+
+        // delete image by id
+        public async Task<bool> DeleteImageAsync(int projectId, int imageId)
+        {
+            var project = await _context.Projects
+                .Include(p => p.Images)
+                .FirstOrDefaultAsync(p => p.Id == projectId);
+            if (project == null) return false;
+
+            var image = project.Images.FirstOrDefault(i => i.Id == imageId);
+            if (image == null) return false;
+            project.Images.Remove(image);
+
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<ProjectImages> AddImageAsync(int projectId, string url)
+        {
+            var image = new ProjectImages
+            {
+                ProjectId = projectId,
+                ImageUrl = url
+            };
+
+            _context.ProjectImages.Add(image);
+            await _context.SaveChangesAsync();
+            return image;
+        }
+
     }
 }

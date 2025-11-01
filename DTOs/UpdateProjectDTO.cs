@@ -7,5 +7,4 @@
     // File if uploading a new cover
     public IFormFile? NewImageCover { get; set; }
     public string? ImageCover { get; set; }
-    public List<IFormFile>? NewImages { get; set; } // optional new uploads
 }

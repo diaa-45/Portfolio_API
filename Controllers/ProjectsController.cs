@@ -63,5 +63,23 @@ namespace Portfolio_API.Controllers
             if (!success) return NotFound();
             return NoContent();
         }
+
+        [HttpDelete("{projectId}/images/{imageId}")]
+        [Authorize]
+        public async Task<IActionResult> DeleteImage(int projectId, int imageId)
+        {
+            var success = await _service.DeleteImageAsync(projectId, imageId);
+            if (!success) return NotFound();
+            return NoContent();
+        }
+        // add new image to image tours
+        [HttpPost("{projectId}/images")]
+        [Authorize]
+        [RequestSizeLimit(10_000_000)] // 10 MB limit (optional)
+        public async Task<IActionResult> AddImage(int projectId, IFormFile image)
+        {
+            var projectImage = await _service.AddImageAsync(projectId, image);
+            return Ok(projectImage);
+        }
     }
 }

@@ -10,5 +10,8 @@ namespace Portfolio_API.Interfaces
         Task<Project> AddAsync(Project project);
         Task<Project?> UpdateAsync(Project project);
         Task<bool> DeleteAsync(int id);
+        Task<bool> DeleteImageAsync(int projectId, int imageId);
+        // add new image to images tours in projet
+        Task<ProjectImages> AddImageAsync(int projectId, string url);
     }
 }
