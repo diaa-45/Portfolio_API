@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Portfolio_API.Data;
 
@@ -11,9 +12,11 @@ using Portfolio_API.Data;
 namespace Portfolio_API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251101194959_AddContactFormTable")]
+    partial class AddContactFormTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -92,7 +95,7 @@ namespace Portfolio_API.Migrations
                             Id = 1,
                             Email = "admin@mail.com",
                             Name = "Super Admin",
-                            PasswordHash = "AQAAAAIAAYagAAAAEFt95flaYJj9FezSg1rYvraVB7tCl5fRw7teSP9L/DfNZFAfJ8a2laSe0uJ5gKhCTw=="
+                            PasswordHash = "AQAAAAIAAYagAAAAEAoQCRrIHDiONp8iZSBTxL9w0r/FAzl8oZTZN+z/AnnQYd5egLsiE/cEMNOqgvb4Uw=="
                         });
                 });
 
@@ -142,9 +145,6 @@ namespace Portfolio_API.Migrations
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
-
-                    b.Property<bool?>("IsRead")
-                        .HasColumnType("bit");
 
                     b.Property<string>("Message")
                         .IsRequired()

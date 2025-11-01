@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Portfolio_API.Data;
 using Portfolio_API.Helpers;
+using Portfolio_API.Hubs;
 using Portfolio_API.Interfaces;
 using Portfolio_API.Repositories;
 using Portfolio_API.Services;
@@ -31,12 +32,17 @@ builder.Services.AddScoped<ICourseService, CourseService>();
 builder.Services.AddScoped<IAboutRepository, AboutRepository>();
 builder.Services.AddScoped<IAboutService, AboutService>();
 
+builder.Services.AddScoped<IContactFormService, ContactFormService>();
+
 builder.Services.AddScoped<IImageService, ImageService>();
 builder.Services.AddSingleton<JwtHelper>();
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddSignalR();
+
+
 
 // Configure JWT
 builder.Services.AddAuthentication(options =>
@@ -82,6 +88,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.MapHub<NotificationHub>("/notification");
 // Enable CORS 
 app.UseCors("AllowAngular");
 
