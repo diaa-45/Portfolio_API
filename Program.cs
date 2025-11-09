@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using AspNetCoreRateLimit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Portfolio_API.Data;
@@ -77,6 +78,19 @@ builder.Services.AddCors(options =>
         });
 });
 
+// Memory cache for counters and policies
+builder.Services.AddMemoryCache();
+
+// Load configuration
+builder.Services.Configure<IpRateLimitOptions>(builder.Configuration.GetSection("IpRateLimiting"));
+
+// Required stores
+builder.Services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
+builder.Services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
+builder.Services.AddSingleton<IProcessingStrategy, AsyncKeyLockProcessingStrategy>();
+builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -95,8 +109,11 @@ app.UseCors("AllowAngular");
 app.UseHttpsRedirection();
 
 app.UseStaticFiles(); // Allow serving images from wwwroot
-
+app.UseAuthentication();
 app.UseAuthorization();
+
+// Add the middleware
+app.UseIpRateLimiting();
 
 app.MapControllers();
 app.MapHub<NotificationHub>("/notification");

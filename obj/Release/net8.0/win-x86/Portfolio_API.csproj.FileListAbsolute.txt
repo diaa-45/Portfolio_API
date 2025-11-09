@@ -126,3 +126,5 @@ C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Release\net8.0\win-x
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Release\net8.0\win-x86\Portfolio_API.pdb
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Release\net8.0\win-x86\Portfolio_API.genruntimeconfig.cache
 C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\obj\Release\net8.0\win-x86\ref\Portfolio_API.dll
+C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\bin\Release\net8.0\win-x86\AspNetCoreRateLimit.dll
+C:\Users\deyaa\source\repos\Portfolio_API\Portfolio_API\bin\Release\net8.0\win-x86\Newtonsoft.Json.dll
