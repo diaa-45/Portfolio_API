@@ -20,6 +20,8 @@ namespace Portfolio_API.Helpers
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Sub, admin.Email),
+                // add email claim
+                new Claim(JwtRegisteredClaimNames.Email, admin.Email),
                 new Claim("name", admin.Name),
                 new Claim("id", admin.Id.ToString())
             };

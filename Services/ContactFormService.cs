@@ -33,30 +33,30 @@ namespace Portfolio_API.Services
 
             await _hubContext.Clients.All.SendAsync("ReceiveNotification", new
             {
-                message = $"📩 New message from {contact.Name}",
-                email = contact.Email,
-                time = contact.CreatedAt
+                contact.Id,
+                contact.Name,
+                contact.Email,
+                contact.Message,
+                contact.CreatedAt
             });
 
             return contact;
         }
 
-        public IEnumerable<ContactForm> GetAll( bool? isRead = false ) 
+        public IEnumerable<ContactForm> GetAll() 
         {
-                // return only is not read
-                if (isRead == true)
-                {
-                    return  _context.ContactForms.OrderByDescending(c => c.CreatedAt);
-                }
-                   return _context.ContactForms.Where(c => c.IsRead == false).OrderByDescending(c => c.CreatedAt);
+            return  _context.ContactForms.OrderByDescending(c => c.CreatedAt);
         }
 
         // mark as read
         public async Task MarkAsReadAsync(int id)
         {
             var contact =await _context.ContactForms.FirstOrDefaultAsync(c => c.Id == id);
-            contact.IsRead = true;
-            _context.SaveChanges();
+            if (contact != null)
+            {
+                contact.IsRead = true;
+                await _context.SaveChangesAsync();
+            }
         }
 
     }

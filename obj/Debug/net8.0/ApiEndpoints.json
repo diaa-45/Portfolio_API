@@ -61,6 +61,16 @@
         "Name": "Values",
         "Type": "System.String",
         "IsRequired": false
+      },
+      {
+        "Name": "LinkedIn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GitHub",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -120,6 +130,16 @@
       },
       {
         "Name": "Values",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LinkedIn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GitHub",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -293,6 +313,22 @@
   },
   {
     "ContainingType": "Portfolio_API.Controllers.AuthController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/Auth/change-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Portfolio_API.DTOs.ChangePasswordDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Portfolio_API.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
     "HttpMethod": "POST",
@@ -330,13 +366,7 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "isRead",
-        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

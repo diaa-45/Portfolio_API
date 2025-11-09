@@ -5,5 +5,7 @@ namespace Portfolio_API.Interfaces
     public interface IAdministratorRepository
     {
         Task<Administrator?> GetByEmailAsync(string email);
+        Task UpdateAsync(Administrator administrator);
+
     }
 }

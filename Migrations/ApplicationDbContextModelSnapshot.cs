@@ -36,6 +36,12 @@ namespace Portfolio_API.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("GitHub")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LinkedIn")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Mission")
                         .HasColumnType("nvarchar(max)");
 
@@ -92,7 +98,7 @@ namespace Portfolio_API.Migrations
                             Id = 1,
                             Email = "admin@mail.com",
                             Name = "Super Admin",
-                            PasswordHash = "AQAAAAIAAYagAAAAEFt95flaYJj9FezSg1rYvraVB7tCl5fRw7teSP9L/DfNZFAfJ8a2laSe0uJ5gKhCTw=="
+                            PasswordHash = "AQAAAAIAAYagAAAAEMaOPUD/sHbyL7pomdoxfaL8HpEqGJbl3b7bx1G7uswx5fvbXdBRhSbBmr/4TZ8d9A=="
                         });
                 });
 

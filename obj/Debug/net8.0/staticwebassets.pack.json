@@ -1,8 +1,12 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\Abouts\\39d8c0d7-b067-429b-a2f0-23034e2cef81.jpg",
-      "PackagePath": "staticwebassets\\Abouts\\39d8c0d7-b067-429b-a2f0-23034e2cef81.jpg"
+      "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\Abouts\\49dc243a-421f-41b3-82e6-430a5b82bdf2.jpg",
+      "PackagePath": "staticwebassets\\Abouts\\49dc243a-421f-41b3-82e6-430a5b82bdf2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\08619f34-1c44-437e-9d11-98dfa89b8578.jpg",
+      "PackagePath": "staticwebassets\\articles\\08619f34-1c44-437e-9d11-98dfa89b8578.jpg"
     },
     {
       "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\0a701f92-577c-4ef4-b16c-6c4ef962ebd6.png",
@@ -23,6 +27,10 @@
     {
       "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\2e872990-ec91-4d66-ae77-a464a8b3cb5a.png",
       "PackagePath": "staticwebassets\\articles\\2e872990-ec91-4d66-ae77-a464a8b3cb5a.png"
+    },
+    {
+      "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\34ecdfbb-22da-4a5d-a3c7-3c580aa2fbc3.jpg",
+      "PackagePath": "staticwebassets\\articles\\34ecdfbb-22da-4a5d-a3c7-3c580aa2fbc3.jpg"
     },
     {
       "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\articles\\41ac6aa6-6728-49fb-a0fd-ddf2eb65f193.jpg",
@@ -87,6 +95,10 @@
     {
       "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\courses\\a74ff142-d711-4787-88f9-2c74820fddfe.png",
       "PackagePath": "staticwebassets\\courses\\a74ff142-d711-4787-88f9-2c74820fddfe.png"
+    },
+    {
+      "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\courses\\e03fbf0b-6a1d-4e42-b214-3622c83e1b14.png",
+      "PackagePath": "staticwebassets\\courses\\e03fbf0b-6a1d-4e42-b214-3622c83e1b14.png"
     },
     {
       "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\projects\\016028ec-9e9b-4dd1-ab0f-f17997ba52c9.jpg",
@@ -159,6 +171,10 @@
     {
       "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\projects\\4faedfee-de22-46c8-bef2-fb6ea6121ab7.png",
       "PackagePath": "staticwebassets\\projects\\4faedfee-de22-46c8-bef2-fb6ea6121ab7.png"
+    },
+    {
+      "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\projects\\5d722ded-d4dd-4582-8757-d74e26bc56c0.jpg",
+      "PackagePath": "staticwebassets\\projects\\5d722ded-d4dd-4582-8757-d74e26bc56c0.jpg"
     },
     {
       "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\projects\\5d865220-48d0-4291-bdfe-528674f669d2.jpg",
@@ -237,6 +253,10 @@
       "PackagePath": "staticwebassets\\projects\\affcb495-6808-4b8a-99e9-7c2a7ad9c5dd.jpg"
     },
     {
+      "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\projects\\b0b08dca-5153-453f-a5cb-97e9bdc08c28.jpg",
+      "PackagePath": "staticwebassets\\projects\\b0b08dca-5153-453f-a5cb-97e9bdc08c28.jpg"
+    },
+    {
       "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\projects\\b6c3b696-5465-4df8-94dc-c1782c7bb53c.png",
       "PackagePath": "staticwebassets\\projects\\b6c3b696-5465-4df8-94dc-c1782c7bb53c.png"
     },
@@ -255,6 +275,10 @@
     {
       "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\projects\\c10b8d79-8854-40c9-bafc-379fecde5a72.jpg",
       "PackagePath": "staticwebassets\\projects\\c10b8d79-8854-40c9-bafc-379fecde5a72.jpg"
+    },
+    {
+      "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\projects\\c30e56c4-ef03-42e3-90e9-b091dffcd6d1.jpg",
+      "PackagePath": "staticwebassets\\projects\\c30e56c4-ef03-42e3-90e9-b091dffcd6d1.jpg"
     },
     {
       "Id": "C:\\Users\\deyaa\\source\\repos\\Portfolio_API\\Portfolio_API\\wwwroot\\projects\\c7f7356e-ea76-44b6-8b81-99f8d87db224.jpg",

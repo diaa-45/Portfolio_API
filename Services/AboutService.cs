@@ -44,7 +44,10 @@ namespace Portfolio_API.Services
                     Description = dto.Description,
                     Mission = dto.Mission,
                     Vision = dto.Vision,
-                    Values = dto.Values
+                    Values = dto.Values,
+                    LinkedIn = dto.LinkedIn,
+                    GitHub = dto.GitHub
+
                 };
 
                 return await _aboutRepo.AddAsync(about);
@@ -64,6 +67,8 @@ namespace Portfolio_API.Services
                 existing.Mission = dto.Mission ?? existing.Mission;
                 existing.Vision = dto.Vision ?? existing.Vision;
                 existing.Values = dto.Values ?? existing.Values;
+                existing.LinkedIn = dto.LinkedIn ?? existing.LinkedIn;
+                existing.GitHub = dto.GitHub ?? existing.GitHub;
                 existing.UpdatedAt = DateTime.UtcNow;
                 if (dto.OpeningImage != null)
                 {

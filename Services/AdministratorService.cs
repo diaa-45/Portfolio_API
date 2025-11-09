@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Portfolio_API.DTOs;
 using Portfolio_API.Helpers;
 using Portfolio_API.Interfaces;
@@ -33,6 +35,20 @@ namespace Portfolio_API.Services
                 Name = admin.Name,
                 Email = admin.Email
             };
+        }
+        public async Task<bool> ChangePasswordAsync(string email, ChangePasswordDTO request)
+        {
+            var admin = await _repo.GetByEmailAsync(email);
+            if (admin == null)
+                return false;
+
+            var verifyResult = _passwordHasher.VerifyHashedPassword(email, admin.PasswordHash, request.CurrentPassword);
+            if (verifyResult == PasswordVerificationResult.Failed)
+                return false;
+
+            admin.PasswordHash = _passwordHasher.HashPassword(email, request.NewPassword);
+            await _repo.UpdateAsync(admin);
+            return true;
         }
     }
 }

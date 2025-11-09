@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Portfolio_API.DTOs;
 using Portfolio_API.Interfaces;
+using System.Security.Claims;
 
 namespace Portfolio_API.Controllers
 {
@@ -24,5 +27,20 @@ namespace Portfolio_API.Controllers
 
             return Ok(response);
         }
+        [Authorize]
+        [HttpPost("change-password")]
+        public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordDTO request)
+        {
+            var email = User.FindFirst(ClaimTypes.Email)?.Value;
+            if (string.IsNullOrEmpty(email))
+                return Unauthorized();
+
+            var success = await _service.ChangePasswordAsync(email, request);
+            if (!success)
+                return BadRequest(new { message = "Invalid current password" });
+
+            return Ok(new { message = "Password changed successfully" });
+        }
+
     }
 }

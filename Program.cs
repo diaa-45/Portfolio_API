@@ -70,9 +70,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAngular",
         policy =>
         {
-            policy.WithOrigins("http://localhost:4200") 
+            policy.WithOrigins("http://localhost:4200", "https://portfolio-admin-dash.netlify.app") 
                   .AllowAnyHeader()
-                  .AllowAnyMethod();
+                  .AllowAnyMethod()
+                  .AllowCredentials(); // Important for SignalR;
         });
 });
 
@@ -88,7 +89,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.MapHub<NotificationHub>("/notification");
 // Enable CORS 
 app.UseCors("AllowAngular");
 
@@ -99,5 +99,6 @@ app.UseStaticFiles(); // Allow serving images from wwwroot
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapHub<NotificationHub>("/notification");
 
 app.Run();

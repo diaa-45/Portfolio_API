@@ -16,5 +16,11 @@ namespace Portfolio_API.Repositories
         {
             return await _context.Administrators.FirstOrDefaultAsync(a => a.Email == email);
         }
+        public async Task UpdateAsync(Administrator administrator)
+        {
+            _context.Administrators.Update(administrator);
+            await _context.SaveChangesAsync();
+        }
+
     }
 }

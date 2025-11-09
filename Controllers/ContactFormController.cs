@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Portfolio_API.DTOs;
 using Portfolio_API.Interfaces;
@@ -27,13 +28,15 @@ namespace Portfolio_API.Controllers
             return Ok(result);
         }
         [HttpGet]
-        public IActionResult GetAll([FromQuery] bool? isRead =false)
+        [Authorize]
+        public IActionResult GetAll()
         {
-            var contacts = _service.GetAll(isRead);
+            var contacts = _service.GetAll();
             return Ok(contacts);
         }
         // mark as read
         [HttpPut("{id}/read")]
+        [Authorize]
         public async Task<IActionResult> MarkAsRead(int id)
         {
             await _service.MarkAsReadAsync(id);

@@ -10,6 +10,8 @@
         public string? Mission { get; set; }
         public string? Vision { get; set; }
         public string? Values { get; set; }
+        public string? LinkedIn { get; set; }
+        public string? GitHub { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; }
     }
